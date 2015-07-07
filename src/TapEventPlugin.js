@@ -159,6 +159,12 @@ var TapEventPlugin = {
       startCoords.x = 0;
       startCoords.y = 0;
     }
+
+    // Hack to prevent double/ghost click on tap
+    if (event !== null) {
+      event.preventDefault();
+    }
+
     EventPropagators.accumulateTwoPhaseDispatches(event);
     return event;
   }
