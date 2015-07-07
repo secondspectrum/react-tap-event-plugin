@@ -162,7 +162,7 @@ var TapEventPlugin = {
 
     // Hack to prevent double/ghost click on tap
     if (event !== null) {
-      event.preventDefault();
+      //event.preventDefault();
     }
 
     EventPropagators.accumulateTwoPhaseDispatches(event);
